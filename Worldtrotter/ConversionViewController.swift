@@ -35,6 +35,12 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         updateCelsiusLabel()
+        print("viewDidLoad() Converter! only loads once...")
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
+        print("viewWillAppear() gets used every time!")
     }
     
     @IBAction func fahrenheitFieldEditingChanged(_ textField: UITextField) {
